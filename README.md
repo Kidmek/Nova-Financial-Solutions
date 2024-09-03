@@ -37,6 +37,7 @@ Make sure you have Python installed. All required Python libraries are listed in
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Setting Up the Project
 
@@ -45,11 +46,13 @@ pip install -r requirements.txt
    ```bash
    git clone https://github.com/yourusername/Nova-Financial-Solutions.git
    cd Nova-Financial-Solutions
+   ```
 
 2. **Install the Required Libraries**:
 
    ```bash
    pip install -r requirements.txt
+   ```
 
 3. **Add Data Files**:
 
