@@ -1,25 +1,27 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def format_date(data):
+def format_date(data,date_col='date',only_date=False):
     # Simplify the date strings by removing timezone information
     def simplify_date(date_str):
         if pd.isna(date_str):
             return date_str
         # Remove timezone info if present
         data_arr= date_str.split(' ')
+        if(only_date):
+            return data_arr[0]
         data_arr[1] = data_arr[1].split('-')[0]
         return data_arr[0] + ' ' + data_arr[1]
         
 
     # Apply the simplification function
-    data['date'] = data['date'].apply(simplify_date)
+    data[date_col] = data[date_col].apply(simplify_date) 
 
     # Define the simplified date format
-    simplified_date_format = "%Y-%m-%d %H:%M:%S"
+    simplified_date_format = "%Y-%m-%d %H:%M:%S" if not only_date else "%Y-%m-%d"
 
     # Parse the simplified date format
-    data['date_parsed'] = pd.to_datetime(data['date'], format=simplified_date_format, errors='coerce')
+    data['date_parsed'] = pd.to_datetime(data[date_col], format=simplified_date_format, errors='coerce')
 
     # Check for any rows that couldn't be parsed
     if data['date_parsed'].isna().any():
