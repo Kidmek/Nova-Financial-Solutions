@@ -61,7 +61,7 @@ pip install -r requirements.txt
   - `Data/raw_analyst/`: Place your raw analyst data CSV files here.
   - `Data/yfinance_data/`: Place your Yahoo Finance data CSV files here.
   
-  ### Data Loading
+4. **Data Loading**:
   
   The `data_loading.py` script contains a function `load_data` that accepts the folder name and returns a pandas DataFrame of all CSV files directly inside that folder. You can adjust the `data_path` variable as   needed:
   
