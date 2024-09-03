@@ -54,16 +54,16 @@ pip install -r requirements.txt
    pip install -r requirements.txt
    ```
 
-3. **Add Data Files**:
+3. ### Data Preparation
 
-   - `notebooks/`: Contains Jupyter notebooks for analyzing and visualizing data.
-     - `correlation.ipynb` (Task-3)
-     - `descriptive_stat.ipynb` (Task-1)
-     - `publisher_analysis.ipynb` (Task-1)
-     - `quantitative_analysis.ipynb` (Task-2)
-     - `text_analysis.ipynb` (Task-1)
-     - `time_series.ipynb` (Task-1)
-   - `scripts/`: Contains Python scripts that perform data processing and analysis.
-   - `Data/`: Directory for data files.
-     - `raw_analyst/`: Folder for raw analyst data CSV files.
-     - `yfinance_data/`: Folder for Yahoo Finance data CSV files.
+  Make sure to place the required data files in the `Data` folder as follows:
+  
+  - `Data/raw_analyst/`: Place your raw analyst data CSV files here.
+  - `Data/yfinance_data/`: Place your Yahoo Finance data CSV files here.
+  
+  ### Data Loading
+  
+  The `data_loading.py` script contains a function `load_data` that accepts the folder name and returns a pandas DataFrame of all CSV files directly inside that folder. You can adjust the `data_path` variable as   needed:
+  
+  ```python
+  data_path = os.path.join(script_dir, '..', '..', 'Data')
