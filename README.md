@@ -37,3 +37,30 @@ Make sure you have Python installed. All required Python libraries are listed in
 
 ```bash
 pip install -r requirements.txt
+
+## Setting Up the Project
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/Nova-Financial-Solutions.git
+   cd Nova-Financial-Solutions
+
+2. **Install the Required Libraries**:
+
+   ```bash
+   pip install -r requirements.txt
+
+3. **Add Data Files**:
+
+   - `notebooks/`: Contains Jupyter notebooks for analyzing and visualizing data.
+     - `correlation.ipynb` (Task-3)
+     - `descriptive_stat.ipynb` (Task-1)
+     - `publisher_analysis.ipynb` (Task-1)
+     - `quantitative_analysis.ipynb` (Task-2)
+     - `text_analysis.ipynb` (Task-1)
+     - `time_series.ipynb` (Task-1)
+   - `scripts/`: Contains Python scripts that perform data processing and analysis.
+   - `Data/`: Directory for data files.
+     - `raw_analyst/`: Folder for raw analyst data CSV files.
+     - `yfinance_data/`: Folder for Yahoo Finance data CSV files.
