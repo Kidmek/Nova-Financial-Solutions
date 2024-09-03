@@ -54,7 +54,7 @@ pip install -r requirements.txt
    pip install -r requirements.txt
    ```
 
-3. ### Data Preparation
+3. **Data Preparation**:
 
   Make sure to place the required data files in the `Data` folder as follows:
   
